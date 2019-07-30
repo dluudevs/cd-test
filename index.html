@@ -41,6 +41,7 @@
     <section>
         <div class="wrapper">
             <form action="">
+                <label for="make" class="visuallyhidden">make</label>
                 <select name="make">
                     <option selected disabled>Select Make</option>
                     <option value="vw">Volkswagen</option>
@@ -50,21 +51,29 @@
                     <option value="volvo">Volvo</option>
                     <option value="audi">Audi</option>
                 </select>
+
+                <label for="model" class="visuallyhidden">model</label>
                 <select name="model">
                     <option selected disabled class="disable">Select Make First</option>
                     <!-- add background color to this selection -->
                 </select>
                 <!-- use switch statement to change option according to what is selected in make - only if there is time -->
                 <!-- disable and change placeholder when make is not selected -->
+                <label for="registration" class="visuallyhidden">registration</label>
                 <select name="registration">
                     <option selected disabled>First Registration</option>
                 </select>
+
+                <label for="mileage" class="visuallyhidden">mileage</label>
                 <select name="mileage">
                     <option selected disabled>Max Mileage</option>
                 </select>
+                
+                <label for="price" class="visuallyhidden">price</label>
                 <select name="price">
                     <option selected disabled>Max Price</option>
                 </select>
+
                 <button type="submit">show results</button>
                 <!-- include e prevent default -->
             </form>
@@ -75,21 +84,19 @@
     <section>
         <div class="wrapper">
             <div class="listing__filters">
-                <div class="listing__filters-grid-layout">
-                    <img src="assets/grid.svg" alt="grid layout">
-                    <!-- create a row layout, or create both -->
-                </div>
-                <div class="listing__filters-row-layout"></div>
+                <i aria-hidden="true" aria-label="grid view" class="fas fa-th"></i>
+                <i aria-hidden="true" aria-label="row view" class="fas fa-bars"></i>
                 <select name="sort-price">
                     <option selected>Price(low-high)</option>
                     <option >Price(high-low)</option>
                 </select>
             </div>
+
             <div class="listing">
                 <div class="individual-listing">
-                    <img src="assets/vw-golf.jpg" alt="red volkswagen golf">
+                    <img src="assets/vw-golf-sold.jpg" alt="red volkswagen golf">
                     <div class="individual-listing__overlay">
-                        <p class="individual-listing__price">$22,000</p>
+                        <p>$22,000</p>
                         <div>
                             <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
                             <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
@@ -115,7 +122,7 @@
                 <div class="individual-listing">
                     <img src="assets/subaru-sti.jpg" alt="blue subaru sti">
                     <div class="individual-listing__overlay">
-                        <p class="individual-listing__price">$28,500</p>
+                        <p>$28,500</p>
                         <div>
                             <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
                             <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
@@ -139,9 +146,9 @@
                 </div>
 
                 <div class="individual-listing">
-                    <img src="assets/infiniti-q50.jpg" alt="white infiniti q50">
+                    <img src="assets/infiniti-q50-sold.jpg" alt="white infiniti q50">
                     <div class="individual-listing__overlay">
-                        <p class="individual-listing__price">$35,000</p>
+                        <p>$35,000</p>
                         <div>
                             <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
                             <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
@@ -167,38 +174,33 @@
                 <div class="individual-listing">
                     <img src="assets/mercedes-ml.jpg" alt="black mercedes ml">
                     <div class="individual-listing__overlay">
-                        <p class="individual-listing__price">$36,000</p>
+                        <p>$36,000</p>
                         <div>
                             <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
                             <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
                         </div>
                     </div>
-                        <div class="individual-listing__description">
-                            <h3>Mercedes Benz ML (All Wheel Drive)</h3>
-                            <div>
-                                <img src="assets/calendar.svg" alt="year of model">
-                                <p>09-2014</p>
-                            </div>
-                            <div>
-                                <img src="assets/tachometer.svg" alt="mileage">
-                                <p>75,000 miles</p>
-                            </div>
-                            <div>
-                                <img src="assets/heart-beat.svg" alt="top speed">
-                                <p>210 kw (282 hp)</p>
-                            </div>
-                        </div> <div>
-                        <h3></h3>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                    <div class="individual-listing__description">
+                        <h3>Mercedes Benz ML (All Wheel Drive)</h3>
+                        <div>
+                            <img src="assets/calendar.svg" alt="year of model">
+                            <p>09-2014</p>
+                        </div>
+                        <div>
+                            <img src="assets/tachometer.svg" alt="mileage">
+                            <p>75,000 miles</p>
+                        </div>
+                        <div>
+                            <img src="assets/heart-beat.svg" alt="top speed">
+                            <p>210 kw (282 hp)</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="individual-listing">
                     <img src="assets/volvo-v40.jpg" alt="green volvo v40">
                     <div class="individual-listing__overlay">
-                        <p class="individual-listing__price">$42,000</p>
+                        <p>$42,000</p>
                         <div>
                             <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
                             <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
@@ -224,7 +226,7 @@
                 <div class="individual-listing">
                     <img src="assets/audi-tt.jpeg" alt="red audi tt">
                     <div class="individual-listing__overlay">
-                        <p class="individual-listing__price">$45,000</p>
+                        <p>$45,000</p>
                         <div>
                             <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
                             <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
@@ -246,8 +248,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
             <div class="listings__page-numbers">
                 <p>1</p>
                 <p>2</p>
@@ -274,5 +276,95 @@
             <p>Registered Users</p>
         </div>
     </section>
+    <!-- car news -->
+    <section>
+        <h3></h3>
+        <div class="news">
+            <div class="news__card">
+                <img src="" alt="">
+                <h4>50 years of pony-car style</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio magni repellat! ..</p>
+                <div class="news__author">
+                    <div class="news__author-pic-container">
+                        <img src="" alt="john doe profile">
+                    </div>
+                    <!-- img should be consistent with text size - may not need photoshop? -->
+                    <p>by John Doe</p>
+                </div>
+            </div>
+
+            <div class="news__card">
+                <img src="" alt="">
+                <h4>Because 600hp is not enough</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt dolore quisquam? ..</p>
+                <div class="news__author">
+                    <div class="news__author-pic-container">
+                        <img src="" alt="john doe profile">
+                    </div>
+                    <p>by John Doe</p>
+                </div>
+            </div>
+            <button>Submit Your Vehicle<i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+    </section>
+    <footer>
+        <div class="contact">
+            <h3>Car Dealer Inc.</h3>
+            <ul>
+                <li>Address: 1 Fantasy Road, 10100 Car Haven, USA</li>
+                <li>Phone: 0800 555 123 456</li>
+                <li>Email: info@yourcompany.com</li>
+            </ul>
+            <ul class="contact__social">
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.google.ca/"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Opening Hours</h3>
+            <div class="hours">
+                <div>
+                    <p>Monday</p>
+                    <p>9:00 - 18:00</p>
+                </div>
+                <div>
+                    <p>Tuesday</p>
+                    <p>9:00 - 18:00</p>
+                </div>
+                <div>
+                    <p>Wednesday</p>
+                    <p>9:00 - 18:00</p>
+                </div>
+                <div>
+                    <p>Thursday</p>
+                    <p>9:00 - 18:00</p>
+                </div>
+                <div>
+                    <p>Friday</p>
+                    <p>9:00 - 18:00</p>
+                </div>
+                <div>
+                    <p>Saturday</p>
+                    <p>9:00 - 12:00</p>
+                </div>
+                <div>
+                    <p>Sunday</p>
+                    <p>Closed</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Get the best deals first</h3>
+            <form action="">
+                <label for="email" class="visuallyhidden">Your email address</label>
+                <input name="email" type="text" placeholder="Your email address ..">
+                <button type="submit">subscribe</button>
+            </form>
+            <p>No worries. We don't spam, promise.</p>
+        </div>
+        <p>Copyright &copy; 2016 by Car Dealer Inc.</p>
+    </footer>
 </body>
 </html>
