@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Dealer Inc</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<style>
+</style>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <h2>Test</h2>
+                <ul>    
+                    <li><a href=""></a>Home</li>
+                    <li><a href=""></a>Features</li>
+                    <li><a href=""></a>Pages</li>
+                    <li><a href=""></a>Blogs</li>
+                </ul>
+                <ul>
+                    <li>Login</li>
+                    <li><i aria-hidden="true" aria-label="search" class="fas fa-search"></i></li>
+                </ul>
+            </nav>
+            <div>
+                <h1>BMW X4</h1>
+                <ul>
+                    <li>$110,00</li>
+                    <li>05-2016</li>
+                    <li>0 miles</li>
+                    <li>190 kw (255 hp)</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter with form -->
+    <section>
+        <div class="wrapper">
+            <form action="">
+                <select name="make">
+                    <option selected disabled>Select Make</option>
+                    <option value="vw">Volkswagen</option>
+                    <option value="subaru">Subaru</option>
+                    <option value="infinity">Infinity</option>
+                    <option value=mercedes>Mercedes</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <select name="model">
+                    <option selected disabled class="disable">Select Make First</option>
+                    <!-- add background color to this selection -->
+                </select>
+                <!-- use switch statement to change option according to what is selected in make - only if there is time -->
+                <!-- disable and change placeholder when make is not selected -->
+                <select name="registration">
+                    <option selected disabled>First Registration</option>
+                </select>
+                <select name="mileage">
+                    <option selected disabled>Max Mileage</option>
+                </select>
+                <select name="price">
+                    <option selected disabled>Max Price</option>
+                </select>
+                <button type="submit">show results</button>
+                <!-- include e prevent default -->
+            </form>
+        </div>
+    </section>
+
+    <!-- List of Cars -->
+    <section>
+        <div class="wrapper">
+            <div class="listing__filters">
+                <div class="listing__filters-grid-layout">
+                    <img src="assets/grid.svg" alt="grid layout">
+                    <!-- create a row layout, or create both -->
+                </div>
+                <div class="listing__filters-row-layout"></div>
+                <select name="sort-price">
+                    <option selected>Price(low-high)</option>
+                    <option >Price(high-low)</option>
+                </select>
+            </div>
+            <div class="listing">
+                <div class="individual-listing">
+                    <img src="assets/vw-golf.jpg" alt="red volkswagen golf">
+                    <div class="individual-listing__overlay">
+                        <p class="individual-listing__price">$22,000</p>
+                        <div>
+                            <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
+                            <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
+                        </div>
+                    </div>
+                    <div class="individual-listing__description">
+                        <h3>Volkswagen Golf 2.5l</h3>
+                        <div>
+                            <img src="assets/calendar.svg" alt="year of model">
+                            <p>07-2015</p>
+                        </div>
+                        <div>
+                            <img src="assets/tachometer.svg" alt="mileage">
+                            <p>30,000 miles</p>
+                        </div>
+                        <div>
+                            <img src="assets/heart-beat.svg" alt="top speed">
+                            <p>130 kw (175 hp)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="individual-listing">
+                    <img src="assets/subaru-sti.jpg" alt="blue subaru sti">
+                    <div class="individual-listing__overlay">
+                        <p class="individual-listing__price">$28,500</p>
+                        <div>
+                            <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
+                            <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
+                        </div>
+                    </div>
+                    <div class="individual-listing__description">
+                        <h3>Subaru WRX</h3>
+                        <div>
+                            <img src="assets/calendar.svg" alt="year of model">
+                            <p>01-2016</p>
+                        </div>
+                        <div>
+                            <img src="assets/tachometer.svg" alt="mileage">
+                            <p>10,000 miles</p>
+                        </div>
+                        <div>
+                            <img src="assets/heart-beat.svg" alt="top speed">
+                            <p>250 kw (335 hp)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="individual-listing">
+                    <img src="assets/infiniti-q50.jpg" alt="white infiniti q50">
+                    <div class="individual-listing__overlay">
+                        <p class="individual-listing__price">$35,000</p>
+                        <div>
+                            <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
+                            <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
+                        </div>
+                    </div>
+                    <div class="individual-listing__description">
+                        <h3>Infinity Q50</h3>
+                        <div>
+                            <img src="assets/calendar.svg" alt="year of model">
+                            <p>05-2016</p>
+                        </div>
+                        <div>
+                            <img src="assets/tachometer.svg" alt="mileage">
+                            <p>0 miles</p>
+                        </div>
+                        <div>
+                            <img src="assets/heart-beat.svg" alt="top speed">
+                            <p>190 kw (255 hp)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="individual-listing">
+                    <img src="assets/mercedes-ml.jpg" alt="black mercedes ml">
+                    <div class="individual-listing__overlay">
+                        <p class="individual-listing__price">$36,000</p>
+                        <div>
+                            <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
+                            <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
+                        </div>
+                    </div>
+                        <div class="individual-listing__description">
+                            <h3>Mercedes Benz ML (All Wheel Drive)</h3>
+                            <div>
+                                <img src="assets/calendar.svg" alt="year of model">
+                                <p>09-2014</p>
+                            </div>
+                            <div>
+                                <img src="assets/tachometer.svg" alt="mileage">
+                                <p>75,000 miles</p>
+                            </div>
+                            <div>
+                                <img src="assets/heart-beat.svg" alt="top speed">
+                                <p>210 kw (282 hp)</p>
+                            </div>
+                        </div> <div>
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="individual-listing">
+                    <img src="assets/volvo-v40.jpg" alt="green volvo v40">
+                    <div class="individual-listing__overlay">
+                        <p class="individual-listing__price">$42,000</p>
+                        <div>
+                            <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
+                            <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
+                        </div>
+                    </div>
+                    <div class="individual-listing__description">
+                        <h3>Volvo V40 Cross Country</h3>
+                        <div>
+                            <img src="assets/calendar.svg" alt="year of model">
+                            <p>05-2016</p>
+                        </div>
+                        <div>
+                            <img src="assets/tachometer.svg" alt="mileage">
+                            <p>0 miles</p>
+                        </div>
+                        <div>
+                            <img src="assets/heart-beat.svg" alt="top speed">
+                            <p>110 kw (150 hp)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="individual-listing">
+                    <img src="assets/audi-tt.jpeg" alt="red audi tt">
+                    <div class="individual-listing__overlay">
+                        <p class="individual-listing__price">$45,000</p>
+                        <div>
+                            <img aria-label="add to cart" src="assets/plus-icon.svg" alt="plus icon">
+                            <img aria-label="add to favorites" src="assets/star-icon.svg" alt="star icon">
+                        </div>
+                    </div>
+                    <div class="individual-listing__description">
+                        <h3>Audi TT RS</h3>
+                        <div>
+                            <img src="assets/calendar.svg" alt="year of model">
+                            <p>03-2016</p>
+                        </div>
+                        <div>
+                            <img src="assets/tachometer.svg" alt="mileage">
+                            <p>10,000 miles</p>
+                        </div>
+                        <div>
+                            <img src="assets/heart-beat.svg" alt="top speed">
+                            <p>185 kw (248 hp)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="listings__page-numbers">
+                <p>1</p>
+                <p>2</p>
+                <p><i class="fas fa-long-arrow-alt-right"></i></p>
+            </div>
+        </div>
+    </section>
+    <!-- testimony -->
+    <section class="testimony">
+        <div>
+            <h3>25</h3>
+            <p>Years in Business</p>
+        </div>
+        <div>
+            <h3>1,000+</h3>
+            <p>Cars Sold</p>
+        </div>
+        <div>
+            <h3>98%</h3>
+            <p>Customer Satisfaction</p>
+        </div>
+        <div>
+            <h3>10,000+</h3>
+            <p>Registered Users</p>
+        </div>
+    </section>
+</body>
+</html>
