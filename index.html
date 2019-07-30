@@ -45,18 +45,20 @@
                 </div>
             </div>
         </nav>
-        <div>
-            <h1>BMW X4</h1>
-            <ul>
-                <li>$110,00</li>
-                <li>05-2016</li>
-                <li>0 miles</li>
-                <li>190 kw (255 hp)</li>
-            </ul>
+        <div class="header__fullbleed">
+            <div class="wrapper header__car-specs">
+                <h1>BMW X4</h1>
+                <ul>
+                    <li>$110,000</li>
+                    <li>05-2016</li>
+                    <li>0 miles</li>
+                    <li>190 kw (255 hp)</li>
+                </ul>
+            </div>
         </div>
     </header>
 
-    <!-- Filter with form -->
+    <!-- Search Car Listings -->
     <section>
         <div class="wrapper">
             <form action="">
@@ -70,7 +72,7 @@
                     <option value="volvo">Volvo</option>
                     <option value="audi">Audi</option>
                 </select>
-
+            
                 <label for="model" class="visuallyhidden">model</label>
                 <select name="model">
                     <option selected disabled class="disable">Select Make First</option>
@@ -82,26 +84,21 @@
                 <select name="registration">
                     <option selected disabled>First Registration</option>
                 </select>
-
+            
                 <label for="mileage" class="visuallyhidden">mileage</label>
                 <select name="mileage">
                     <option selected disabled>Max Mileage</option>
                 </select>
-                
+            
                 <label for="price" class="visuallyhidden">price</label>
                 <select name="price">
                     <option selected disabled>Max Price</option>
                 </select>
-
+            
                 <button type="submit">show results</button>
                 <!-- include e prevent default -->
             </form>
-        </div>
-    </section>
 
-    <!-- List of Cars -->
-    <section>
-        <div class="wrapper">
             <div class="listing__filters">
                 <i aria-hidden="true" aria-label="grid view" class="fas fa-th"></i>
                 <i aria-hidden="true" aria-label="row view" class="fas fa-bars"></i>
