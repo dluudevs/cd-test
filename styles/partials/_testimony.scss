@@ -1,0 +1,30 @@
+.testimony {
+    background-color: $light-grey;
+    padding: 2.25rem $s-space;
+    margin-bottom: $m-space;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        div {
+            flex-basis: 50%;
+            text-align: center;
+        }
+    }
+
+    h2 {
+        font-size: $section-head;
+        margin: 0;
+    }
+
+    p {
+        color: $off-white;
+        margin: 0;
+    }
+}
+
+.testimony__top {
+    margin-bottom: $xs-space;
+}

@@ -9,15 +9,11 @@
     padding: $s-space;
 
     button {
-        background-color: $button-red;
-        color: white;
-        transition: all 0.25s;
-    }
+        @include red-button;
 
-    button:hover {
-        background-color: white;
-        border-color: $button-red;
-        color: $button-red;
+        &:hover {
+            @include red-button--hover
+        }
     }
 }
 
@@ -41,14 +37,27 @@
         max-width: 26px;
     }
 
-    button:first-child .fas{
-       color: #666;
-   }
-
     .fas {
-        color: $off-white;
+        color: $shadow-grey;
         font-size: 1rem;
     }
+
+    // for JS class toggling
+    .listing__filter--selected{
+        cursor: default;
+        .fas {
+            color: $off-white;
+        }
+   }
+}
+
+.listing {
+    display: flex;
+    flex-direction: column;
+}
+
+.individual-listing {
+    margin-bottom: $s-space;
 }
 
 .individual-listing__img-container {
@@ -56,21 +65,20 @@
     
     > img {
         display: block;
+        max-height: 192px;
         width: 100%;
-        // object-fit: contain;
-        // max-height: 193px;
     }
 }
 
 .individual-listing__overlay {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem $xs-space 0.35rem $xs-space;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0.25rem $xs-space 0.35rem $xs-space;
     
     p {
         color: white;
@@ -101,19 +109,19 @@
     background-color: $light-grey;
     border-radius: 2px;
     padding: 0.5rem;
-    position: relative;;
+    position: relative;
     z-index: 1;
 }
 
 .individual-listing__description {
 
     border: 1px solid $border-grey;
-    box-shadow: 0px 1px 1.5px $shadow-grey;
-    margin-bottom: $s-space;
     padding: 0 $xs-space;
+    @include grey-box-shadow;
 
-    h2 {
-        font-size: 1.6rem;
+    h3 {
+        font-size: $sub-head;
+        font-weight: 500;
         margin: $xs-space 0;
     }
 
@@ -135,8 +143,34 @@
     }
 
     p {
-        margin: 0;
         color: $off-white;
+        margin: 0;
     }
 }
 
+.listings__page-numbers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $m-space;
+
+    p {
+        color: $off-white;
+        padding: 0.5rem 1rem;
+    }
+    
+    .listings__page-numbers--selected,
+    p:last-child {
+        background-color: $light-grey;
+        color: black;
+        font-weight: 700;
+        margin-left: 0.5rem;
+    }
+
+    .listings__page-numbers--selected:hover {
+        cursor: default;
+    }
+
+    p:hover {
+        cursor: pointer;
+    }
+}

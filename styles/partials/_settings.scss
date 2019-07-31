@@ -1,10 +1,15 @@
 // colors
-$off-white: #a4a4a4; //text
+$off-white: #999; //text
 $border-grey: #b4b4b44f; 
-$dark-grey: #373737; //header & footer bg
+$dark-grey: #282828; //header & footer bg
 $light-grey: #ededed4f; //icon-background
 $shadow-grey: #c4c4c469;
 $button-red: #e24949;
+
+//font-size
+$s-head: 1.25rem;
+$sub-head: 1.6rem;
+$section-head: 2.0rem;
 
 //spacing
 $xs-space: 1rem;
@@ -13,7 +18,7 @@ $m-space: 3rem;
 $l-space: 4.25rem;
 
 //mixins
-@mixin img-overlay($rgba){
+@mixin img-overlay($color){
     content: '';
     position: absolute;
     z-index: 0;
@@ -21,5 +26,22 @@ $l-space: 4.25rem;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $rgba;
+    background-color: $color;
+}
+
+@mixin grey-box-shadow{
+    box-shadow: 0px 1px 1.5px $shadow-grey;
+}
+
+@mixin red-button{
+    background-color: $button-red;
+    color: white;
+    font-weight: 700;
+    transition: all 0.25s;
+}
+
+@mixin red-button--hover{
+    background-color: white;
+    border-color: $button-red;
+    color: $button-red;
 }

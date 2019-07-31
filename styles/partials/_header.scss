@@ -7,6 +7,10 @@ nav {
     background: $dark-grey;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 .header__fullbleed {
     background: url('../assets/bmw-background.jpg');
     background-size: cover;
@@ -15,10 +19,6 @@ nav {
     // padding: 21.5rem 0 1.5rem 0;
     position: relative;
 
-    h1 {
-        font-weight: 600;
-        font-size: 2rem;
-    }
 }
 
 .header__fullbleed:after{
@@ -26,12 +26,12 @@ nav {
 }
 
 .header__fullbleed ul {
-    padding-left: 0;
     display: flex;
+    padding-left: 0;
 
     li:first-child{
-        list-style: none;
         font-weight: 700;
+        list-style: none;
     }
 
     li:not(:last-child){
@@ -43,11 +43,6 @@ nav {
     }
 }
 
-.wrapper {
-    width: 90%;
-    margin: 0 auto;
-}
-
 .header__car-specs {
     position: relative;
     z-index: 10;
@@ -55,11 +50,9 @@ nav {
 
 
 // *** BOOTSTRAP ***
-
 .navbar {
     padding: 0 5% 0 5%; //padding for mobile
 }
-
 
 .navbar-light .navbar-brand, 
 .navbar-light .navbar-nav .nav-link {
@@ -91,7 +84,7 @@ nav {
 } 
 
 .navbar-light .navbar-toggler {
-    border-color: $off-white;
+    border-color: $border-grey;
 }
 
 .navbar-light .navbar-toggler-icon {

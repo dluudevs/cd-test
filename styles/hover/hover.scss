@@ -474,6 +474,13 @@
 	}
 }
 
+@import "effects/shadow-and-glow-transitions/glow-social";
+@if $includeClasses {
+	.#{$nameSpace}-glow-social {
+		@include glow();
+	}
+}
+
 @import "effects/shadow-and-glow-transitions/shadow";
 @if $includeClasses {
 	.#{$nameSpace}-shadow {

@@ -1,0 +1,103 @@
+footer {
+    background-color:$dark-grey;
+    color: white;
+}
+
+.footer-details {
+    padding: $s-space 0 0 0;
+}
+
+.contact  {
+    h3 {
+        margin: 0;
+        margin-bottom: $xs-space;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin-bottom: $xs-space;
+        padding-left: 0;
+    }
+
+    .contact__social {
+        flex-direction: row;
+        margin-bottom: $s-space;
+
+        a {
+            background-color: $border-grey;
+            margin-right: 0.5rem;
+            padding: 0.6rem 0.75rem;
+            text-align: center;
+            width: 25px;
+        }
+
+        a:hover {
+            color: inherit;
+        }
+    }
+}
+
+.hours {
+    margin-bottom: $s-space;
+    h3 {
+        margin: 0 0 $xs-space 0;
+    }
+}
+
+.hours-days {
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div:last-child p {
+        margin-bottom: 0;
+    }
+
+    .set-current-day {
+        font-weight: 700;
+    }
+}
+
+.subscribe {
+
+    margin-bottom: $m-space;
+
+    h3 {
+        margin: 0 0 $xs-space 0;
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        border-color: transparent;
+        flex-basis: 72.5%;
+    }
+    
+    button {
+        flex-basis: 27.5%;
+        @include red-button;
+
+        &:hover {
+            @include red-button--hover;
+        }
+    }
+    
+    p {
+        margin: 0.5rem 0 0 0;
+    }
+}
+
+footer > p {
+    background-color: black;
+    color: $off-white;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: $xs-space 5%;
+}
+
