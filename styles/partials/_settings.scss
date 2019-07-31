@@ -1,5 +1,25 @@
 // colors
-$off-white: rgba(255, 255, 255, 0.2);
-$off-grey: #373737;
+$off-white: #a4a4a4; //text
+$border-grey: #b4b4b44f; 
+$dark-grey: #373737; //header & footer bg
+$light-grey: #ededed4f; //icon-background
+$shadow-grey: #c4c4c469;
+$button-red: #e24949;
 
 //spacing
+$xs-space: 1rem;
+$s-space: 1.75rem;
+$m-space: 3rem;
+$l-space: 4.25rem;
+
+//mixins
+@mixin img-overlay($rgba){
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $rgba;
+}

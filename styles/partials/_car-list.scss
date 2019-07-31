@@ -1,0 +1,142 @@
+.listing__wrapper > form {
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 45vh;
+    margin-bottom: $s-space;
+    padding: $s-space;
+
+    button {
+        background-color: $button-red;
+        color: white;
+        transition: all 0.25s;
+    }
+
+    button:hover {
+        background-color: white;
+        border-color: $button-red;
+        color: $button-red;
+    }
+}
+
+.listing__filters {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $s-space;
+
+    select {
+        flex-basis: 40%;
+        text-align: right;
+    }
+
+    > *:not(:last-child){
+        margin-right: 0.5rem;
+    }
+
+    button {
+        border: 1px solid $border-grey;
+        padding: 0.5rem 0.75rem;
+        max-width: 26px;
+    }
+
+    button:first-child .fas{
+       color: #666;
+   }
+
+    .fas {
+        color: $off-white;
+        font-size: 1rem;
+    }
+}
+
+.individual-listing__img-container {
+    position: relative;
+    
+    > img {
+        display: block;
+        width: 100%;
+        // object-fit: contain;
+        // max-height: 193px;
+    }
+}
+
+.individual-listing__overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.25rem $xs-space 0.35rem $xs-space;
+    
+    p {
+        color: white;
+        font-size: 1.2rem;
+        letter-spacing: 0.2px;
+        margin: 0;
+        z-index: 1;
+    }
+
+    img {
+        display: inline-block;
+    }
+
+    img:first-child {
+        margin-right: 0.25rem;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+}
+
+.individual-listing__overlay:after {
+    @include img-overlay(rgba(0, 0, 0, 0.35))
+}
+
+.individual-listing__overlay-icon {
+    background-color: $light-grey;
+    border-radius: 2px;
+    padding: 0.5rem;
+    position: relative;;
+    z-index: 1;
+}
+
+.individual-listing__description {
+
+    border: 1px solid $border-grey;
+    box-shadow: 0px 1px 1.5px $shadow-grey;
+    margin-bottom: $s-space;
+    padding: 0 $xs-space;
+
+    h2 {
+        font-size: 1.6rem;
+        margin: $xs-space 0;
+    }
+
+    > div {
+        display: flex;
+        align-items: flex-end;
+
+        img {
+            padding-right: $xs-space;
+        }
+    }
+
+    div:nth-child(2n){
+        margin: 0.5rem 0;
+    }
+
+    div:last-child{
+        margin-bottom: $xs-space;
+    }
+
+    p {
+        margin: 0;
+        color: $off-white;
+    }
+}
+

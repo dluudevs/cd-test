@@ -1,32 +1,28 @@
 header {
     color: white;
+    margin-bottom: $m-space;
 }
 
 nav {
-    background: $off-grey;
+    background: $dark-grey;
 }
 
 .header__fullbleed {
     background: url('../assets/bmw-background.jpg');
     background-size: cover;
     background-position: 55% 0;
-    padding: 37.5vh 0 2.5vh 0;
+    padding: 72.5vh 0 2.5vh 0;
+    // padding: 21.5rem 0 1.5rem 0;
     position: relative;
 
     h1 {
         font-weight: 600;
+        font-size: 2rem;
     }
 }
 
 .header__fullbleed:after{
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.25);
+    @include img-overlay(rgba(0, 0, 0, 0.25))
 }
 
 .header__fullbleed ul {
