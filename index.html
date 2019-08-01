@@ -15,47 +15,51 @@
 </style>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-            <h2><a class="navbar-brand" href="#">Test</a></h2>
-            <button class="navbar-toggler hvr-glow-social" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <div class="navbar-nav">    
-                    <li>
-                        <a class="nav-item nav-link hvr-underline-from-left" href="#">Features</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link hvr-underline-from-left" href="#">Home</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link hvr-underline-from-left" href="#">Pages</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link hvr-underline-from-left" href="#">Blogs</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link nav-login hvr-underline-from-left" href="#">Login</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link nav-search hvr-grow" href="#">
-                            <i aria-hidden="true" aria-label="search" class="fas fa-search"></i>
-                        </a>
-                    </li>
-                </div>
-            </div>
-        </nav>
-            <div class="header__fullbleed">
-                <div class="wrapper header__car-specs">
-                    <h1>BMW X4</h1>
-                    <ul>
-                        <li>$110,000</li>
-                        <li>05-2016</li>
-                        <li>0 miles</li>
-                        <li>190 kw (255 hp)</li>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="wrapper">
+                <h2><a class="navbar-brand" href="#">Test</a></h2>
+                <button class="navbar-toggler hvr-glow-social" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">    
+                        <li>
+                            <a class="nav-item nav-link hvr-underline-from-left" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-item nav-link hvr-underline-from-left" href="#">Features</a>
+                        </li>
+                        <li>
+                            <a class="nav-item nav-link hvr-underline-from-left" href="#">Pages</a>
+                        </li>
+                        <li>
+                            <a class="nav-item nav-link hvr-underline-from-left" href="#">Blogs</a>
+                        </li>
+                        <ul>
+                            <li class="login">
+                                <a class="nav-item nav-link nav-login hvr-underline-from-left" href="#">Login</a>
+                            </li>
+                            <li>
+                                <a class="nav-item nav-link nav-search hvr-grow" href="#">
+                                    <i aria-hidden="true" aria-label="search" class="fas fa-search"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
             </div>
+        </nav>
+        <div class="header__fullbleed">
+            <div class="wrapper header__car-specs">
+                <h1>BMW X4</h1>
+                <ul>
+                    <li>$110,000</li>
+                    <li>05-2016</li>
+                    <li>0 miles</li>
+                    <li>190 kw (255 hp)</li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <!-- Search Car Listings -->
@@ -68,14 +72,14 @@
                     <option value="vw">Volkswagen</option>
                     <option value="subaru">Subaru</option>
                     <option value="infinity">Infinity</option>
-                    <option value=mercedes>Mercedes</option>
+                    <option value="mercedes">Mercedes</option>
                     <option value="volvo">Volvo</option>
                     <option value="audi">Audi</option>
                 </select>
             
                 <label for="model" class="visuallyhidden">model</label>
                 <select disabled name="model">
-                    <option selected disabled class="disable">Select Make First</option>
+                    <option selected disabled>Select Make First</option>
                 </select>
                 <!-- use switch statement to change option according to what is selected in make - only if there is time -->
                 <!-- disable and change placeholder when make is not selected -->
@@ -119,7 +123,7 @@
                 </button>
                 <select name="sort-price">
                     <option selected>Price (low-high)</option>
-                    <option >Price (high-low)</option>
+                    <option>Price (high-low)</option>
                 </select>
             </div>
 
@@ -296,7 +300,7 @@
             <div class="listings__page-numbers">
                 <p>1</p>
                 <p class="listings__page-numbers--selected">2</p>
-                <p><i class="fas fa-long-arrow-alt-right"></i></p>
+                <p><i aria-hidden="true" aria-label="next page" class="fas fa-long-arrow-alt-right"></i></p>
             </div>
         </div>
     </section>
@@ -328,11 +332,11 @@
             <div class="news__card">
                 <img src="assets/mustang.jpg" alt="red ford mustang">
                 <div class="news__card-description">
-                    <h4>50 years of pony-car style</h4>
+                    <h4><a href="#">50 years of pony-car style</a></h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio magni repellat! ..</p>
                     <div class="news__author">
                         <img src="assets/jane-doe.jpg" alt="Jane Doe profile">
-                        <p>by Jane Doe</p>
+                        <p><a href="#">by Jane Doe</a></p>
                     </div>
                 </div>
             </div>
@@ -340,80 +344,84 @@
             <div class="news__card">
                 <img src="assets/bmw-m4.jpg" alt="blue bmw m4">
                 <div class="news__card-description">
-                    <h4>Because 600hp is not enough</h4>
+                    <h4><a href="#">Because 600hp is not enough</a></h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt dolore quisquam? ..</p>
                     <div class="news__author">
                         <img src="assets/jane-doe.jpg" alt="Jane Doe profile">
-                        <p>by Jane Doe</p>
+                        <p><a href="#">by Jane Doe</a></p>
                     </div>
                 </div>
             </div>
-            <button><a href="#">Submit Your Vehicle<i class="fas fa-long-arrow-alt-right"></i></a></button>
-            
         </div>
+        <button><a href="#">Submit Your Vehicle<i class="fas fa-long-arrow-alt-right"></i></a></button>
     </section>
+
     <footer>
         <div class="wrapper">
             <div class="footer-details">
-                <div class="contact">
+                <div class="footer-details__section contact">
                     <h3>Car Dealer Inc.</h3>
-                <ul>
-                    <li>Address: 1 Fantasy Road, 10100 Car Haven, USA</li>
-                    <li>Phone: 0800 555 123 456</li>
-                    <li>Email: info@yourcompany.com</li>
-                </ul>
-                <ul class="contact__social">
-                    <li><a class="hvr-glow-social" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a class="hvr-glow-social" href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                    <li><a class="hvr-glow-social" href="https://www.google.ca/"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a class="hvr-glow-social" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
-                </ul>
-            </div>
-            <div class="hours">
-                <h3>Opening Hours</h3>
-                <div class="hours-days">
-                    <div>
-                        <p>Monday</p>
-                        <p>9:00 - 18:00</p>
-                    </div>
-                    <div>
-                        <p>Tuesday</p>
-                        <p>9:00 - 18:00</p>
-                    </div>
-                    <div>
-                        <p>Wednesday</p>
-                        <p>9:00 - 18:00</p>
-                    </div>
-                    <div class="set-current-day">
-                        <p>Thursday</p>
-                        <p>9:00 - 18:00</p>
-                    </div>
-                    <div>
-                        <p>Friday</p>
-                        <p>9:00 - 18:00</p>
-                    </div>
-                    <div>
-                        <p>Saturday</p>
-                        <p>9:00 - 12:00</p>
-                    </div>
-                    <div>
-                        <p>Sunday</p>
-                        <p>Closed</p>
+                    <ul>
+                        <li>Address: 1 Fantasy Road, 10100 Car Haven, USA</li>
+                        <li>Phone: 0800 555 123 456</li>
+                        <li>Email: info@yourcompany.com</li>
+                    </ul>
+                    <ul class="contact__social">
+                        <li><a class="hvr-glow-social" href="https://www.facebook.com/"><i aria-hidden="true" aria-label="facebook" class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="hvr-glow-social" href="https://twitter.com/"><i aria-hidden="true" aria-label="twitter" class="fab fa-twitter"></i></a></li>
+                        <li><a class="hvr-glow-social" href="https://www.google.ca/"><i aria-hidden="true" aria-label="google plus" class="fab fa-google-plus-g"></i></a></li>
+                        <li><a class="hvr-glow-social" href="https://www.linkedin.com/"><i aria-hidden="true" aria-label="linkedin" class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-details__section hours">
+                    <h3>Opening Hours</h3>
+                    <div class="hours-days">
+                        <div>
+                            <p>Monday</p>
+                            <p>9:00 - 18:00</p>
+                        </div>
+                        <div>
+                            <p>Tuesday</p>
+                            <p>9:00 - 18:00</p>
+                        </div>
+                        <div>
+                            <p>Wednesday</p>
+                            <p>9:00 - 18:00</p>
+                        </div>
+                        <div class="set-current-day">
+                            <p>Thursday</p>
+                            <p>9:00 - 18:00</p>
+                        </div>
+                        <div>
+                            <p>Friday</p>
+                            <p>9:00 - 18:00</p>
+                        </div>
+                        <div>
+                            <p>Saturday</p>
+                            <p>9:00 - 12:00</p>
+                        </div>
+                        <div>
+                            <p>Sunday</p>
+                            <p>Closed</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="subscribe">
-                <h3>Get the best deals first</h3>
-                <form action="">
-                    <label for="email" class="visuallyhidden">Your email address</label>
-                    <input name="email" type="text" placeholder="Your email address ..">
-                    <button type="submit">subscribe</button>
-                </form>
-                <p>No worries. We don't spam, promise.</p>
+                <div class="footer-details__section subscribe">
+                    <h3>Get the best deals first</h3>
+                    <form action="">
+                        <label for="email" class="visuallyhidden">Your email address</label>
+                        <input name="email" type="text" placeholder="Your email address ..">
+                        <button type="submit">subscribe</button>
+                    </form>
+                    <p>No worries. We don't spam, promise.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <p>Copyright &copy; 2016 by Car Dealer Inc.</p>
+        <div class="fullbleed__copyright">
+            <div class="wrapper">
+                <p>Copyright &copy; 2016 by Car Dealer Inc.</p>
+            </div>
+        </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

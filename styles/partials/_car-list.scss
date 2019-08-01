@@ -1,12 +1,14 @@
-.listing__wrapper > form {
+.listing__wrapper form {
     background-color: $light-grey;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    min-height: 45vh;
     margin-bottom: $s-space;
     padding: $s-space;
+
+    select {
+        margin-bottom: 0.5rem;
+    }
 
     button {
         @include red-button;
@@ -23,8 +25,8 @@
     margin-bottom: $s-space;
 
     select {
-        flex-basis: 40%;
         text-align: right;
+        width: 140px;
     }
 
     > *:not(:last-child){
@@ -33,13 +35,14 @@
 
     button {
         border: 1px solid $border-grey;
+        max-width: 30px;
         padding: 0.5rem 0.75rem;
-        max-width: 26px;
     }
-
+    
     .fas {
         color: $shadow-grey;
         font-size: 1rem;
+        text-align: center;
     }
 
     // for JS class toggling
@@ -172,5 +175,46 @@
 
     p:hover {
         cursor: pointer;
+    }
+}
+
+@media (min-width: 500px){
+    .listing {
+        align-items: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .individual-listing {
+        width: 48.75%;
+        h3 {
+           @include no-wrap-text;
+        }
+    }
+}
+
+@media (min-width: 992px){
+    .listing__wrapper > form {
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: auto;
+        padding: $m-space;
+
+        select, button {
+            flex-basis: 48.5%;
+        }
+
+        button {
+            height: 32px;
+        }
+    }
+
+    .individual-listing {
+        width: 32%;
+    }
+
+    .listings__page-numbers {
+        margin-bottom: $l-space;
     }
 }

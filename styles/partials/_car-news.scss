@@ -1,6 +1,4 @@
 .news {
-    display: flex;
-    flex-direction: column;
 
     h3 {
         font-size: $sub-head;
@@ -35,8 +33,16 @@
     }
 }
 
-.news__card {
+.news .wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.news__card:first-child{
     margin-bottom: $s-space;
+}
+
+.news__card {
     text-align: center;
 
     img {
@@ -79,7 +85,34 @@
         height: 2rem;
         margin-right: 0.5rem;
         object-fit: contain;
-        width: 7.5%;
+        width: 10%;
     }
 }
 
+@media(min-width: 992px){
+    .news .wrapper {
+        width: 40%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .news button {
+        margin-bottom: $xl-space;
+    }
+
+    .news__card {
+        width: 48.5%;
+
+        &:first-child{
+            margin-bottom: 0;
+        }
+
+        h4 {
+            @include no-wrap-text;
+        }
+
+        a:hover {
+            color: inherit;
+        }
+    }
+}

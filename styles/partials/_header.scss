@@ -11,12 +11,23 @@ h1 {
     font-size: 2rem;
 }
 
+.navbar .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 .header__fullbleed {
     background: url('../assets/bmw-background.jpg');
     background-size: cover;
     background-position: 55% 0;
-    padding: 72.5vh 0 2.5vh 0;
-    // padding: 21.5rem 0 1.5rem 0;
+    padding: 32.5vh 0 2.5vh 0;
     position: relative;
 
 }
@@ -35,11 +46,7 @@ h1 {
     }
 
     li:not(:last-child){
-        margin-right: 2rem;
-    }
-
-    li:not(:first-child){
-        padding-left: 0.25rem;
+        margin-right: 1.65rem;
     }
 }
 
@@ -51,7 +58,11 @@ h1 {
 
 // *** BOOTSTRAP ***
 .navbar {
-    padding: 0 5% 0 5%; //padding for mobile
+    padding: 0; //padding for mobile
+}
+
+.navbar-expand-lg .navbar-nav li{
+    font-weight: 700;
 }
 
 .navbar-light .navbar-brand, 
@@ -59,6 +70,7 @@ h1 {
     color: white;
     font-weight: 600;
     text-transform: uppercase;
+    padding: 0.5rem 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -90,3 +102,46 @@ h1 {
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+@media (min-width: 992px){
+
+    header {
+        margin-bottom: $l-space;
+    }
+    
+    .navbar-expand-lg .navbar-nav {
+        flex-basis: 60%;
+        justify-content: space-between;
+
+        li {
+            flex-basis: 10%;
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            flex-basis: 20%;
+            justify-content: space-between;
+            margin-left: $xs-space;
+
+            li {
+                flex-basis: auto;
+            }
+        }
+    }
+
+    .login:after {
+        content: '';
+        background-color: $border-grey;
+        position: absolute;
+        top: 0;
+        left: 95.75%;
+        height: 54px;
+        width: 2px;
+    }
+
+    .header__fullbleed ul li:not(:last-child){
+        margin-right: 2.25rem;
+    }
+}
+

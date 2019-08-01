@@ -30,7 +30,7 @@ footer {
             margin-right: 0.5rem;
             padding: 0.6rem 0.75rem;
             text-align: center;
-            width: 25px;
+            width: 30px;
         }
 
         a:hover {
@@ -62,7 +62,6 @@ footer {
 }
 
 .subscribe {
-
     margin-bottom: $s-space;
 
     h3 {
@@ -93,11 +92,38 @@ footer {
     }
 }
 
-footer > p {
+.fullbleed__copyright {
     background-color: black;
+}
+
+footer .wrapper:last-child p {
     color: $off-white;
     font-size: 0.9rem;
     margin: 0;
-    padding: $xs-space 5%;
+    padding: $xs-space 0;
 }
+
+@media (min-width: 992px){
+    .footer-details {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-details__section {
+        margin-bottom: $l-space;
+    }
+
+    .contact {
+        width: 34.5%;
+    }
+
+    .hours {
+        width: 27.5%;
+    }
+
+    .subscribe {
+        width: 32%;
+    }
+}
+
 

@@ -1,7 +1,7 @@
 .testimony {
     background-color: $light-grey;
-    padding: 2.25rem $s-space;
     margin-bottom: $m-space;
+    padding: 2.25rem $s-space;
 
     .wrapper {
         display: flex;
@@ -27,4 +27,15 @@
 
 .testimony__top {
     margin-bottom: $xs-space;
+}
+
+@media (min-width: 992px){
+    .testimony {
+        margin-bottom: $l-space;
+        padding: $m-space $s-space;
+
+        .wrapper div {
+            flex-basis: 25%;
+        }
+    }
 }

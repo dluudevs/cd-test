@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+    font-size: 75%; //12px
 }
 
 h1, h2, h3, h4 {
@@ -27,5 +27,18 @@ button {
 
 .wrapper {
     width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+@media (min-width: 992px){
+    .wrapper {
+        width: 85%;
+    }
+}
+
+@media (min-width: 1200px){
+    .wrapper {
+        width: 80%;
+    }
 }

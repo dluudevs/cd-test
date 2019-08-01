@@ -16,6 +16,7 @@ $xs-space: 1rem;
 $s-space: 1.75rem;
 $m-space: 3rem;
 $l-space: 4.25rem;
+$xl-space: 8.5rem;
 
 //mixins
 @mixin img-overlay($color){
@@ -44,4 +45,10 @@ $l-space: 4.25rem;
     background-color: white;
     border-color: $button-red;
     color: $button-red;
+}
+
+@mixin no-wrap-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
