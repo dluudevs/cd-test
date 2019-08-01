@@ -4600,6 +4600,8 @@ h1 {
     left: 95.75%;
     height: 54px;
     width: 2px; }
+  .header__fullbleed {
+    background-position: 55% 35%; }
   .header__fullbleed ul li:not(:last-child) {
     margin-right: 2.25rem; } }
 
