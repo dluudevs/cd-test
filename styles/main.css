@@ -4919,11 +4919,11 @@ h1 {
     padding-top: 1rem; }
   .news__author img {
     border-radius: 50%;
-    height: 2rem;
+    height: 20px;
     margin-right: 0.5rem;
     -o-object-fit: contain;
     object-fit: contain;
-    width: 10%; }
+    width: 20px; }
 
 @media (min-width: 992px) {
   .news .wrapper {
